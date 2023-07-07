@@ -2,12 +2,45 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="icon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vite App</title>
+    <title>Ilham Kurniawan</title>
+    <!-- fontawesome icon link -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- google fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Permanent+Marker&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+      body {
+        background-color: #ffffff;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+    </style>
   </head>
-  <body>
-    <div id="app"></div>
+  <body class="scroll-smooth" >
+    
+    <div id="app" class="bg-tersier" ></div>
+
+    <!-- scroll reveal js link -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- custom js link -->
     <script type="module" src="/src/main.js"></script>
+    <!-- custom js -->
+    <script>
+      // navbar fixed //
+      window.onscroll = function () {
+      const header = document.querySelector('header');
+      const fixedNav = header.offsetTop;
+      if (window.pageYOffset > fixedNav) {
+          header.classList.add('navbar-fixed');
+      } else {
+          header.classList.remove('navbar-fixed');
+      }
+      };
+    </script>
+    
   </body>
 </html>
